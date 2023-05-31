@@ -7,7 +7,7 @@ joblib==1.1.0
 # bs4==4.11.1
 # beautifulsoup4==4.11.1
 
-sklearn==1.2.2
+sklearn
 Pillow==9.4.0
 pandas==1.5.3
 requests==2.27.1
