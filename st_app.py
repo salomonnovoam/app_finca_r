@@ -63,6 +63,10 @@ with tab1:
     if st.button('Recolectar datos'):
         with st.spinner('Recolectando datos...'):
             data_r = executor_lasso(search_r)
-            df_to_predict = get_processed_info(search_r)
-            st.dataframe(df_to_predict.drop(['price'],axis=1)) 
-            st.write('El precio de la propiedad debería ser', data_r)
+    if st.button('Recolectar datos'):
+        with st.spinner('Recolectando datos...'):
+            data_r = executor_lasso(search_r)
+            # df_to_predict = get_processed_info(search_r)
+            # st.dataframe(df_to_predict.drop(['price'],axis=1)) 
+            st.write('El precio de la propiedad debería ser', data_r) 
+
