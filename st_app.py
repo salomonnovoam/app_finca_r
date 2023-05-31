@@ -60,9 +60,7 @@ with tab1:
     st.write('')
     # df_to_predict = get_processed_info(link)
 
-    if st.button('Recolectar datos'):
-        with st.spinner('Recolectando datos...'):
-            data_r = executor_lasso(search_r)
+
     if st.button('Recolectar datos'):
         with st.spinner('Recolectando datos...'):
             data_r = executor_lasso(search_r)
