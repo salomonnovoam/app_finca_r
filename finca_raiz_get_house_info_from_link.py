@@ -46,13 +46,6 @@ def get_json_from_url(link):
             proxies = get_proxy_dc()
         )
 
-        soup = BeautifulSoup(response.text, 'lxml')
-        soup
-
-        discovery = soup.find('script', {'id':'__NEXT_DATA__'}).text
-        print(link)
-        # return json.loads(discovery)['props']['pageProps']
-        return response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
         return response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
     except Exception as e:
         print(e)
