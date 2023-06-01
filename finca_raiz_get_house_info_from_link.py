@@ -72,10 +72,10 @@ def prepare (i):
 def get_processed_info(link):
 
     a = get_json_from_url(link)
-
+    print(a)
     a_ = prepare (a)
 
-    a_
+
 
     df = pd.json_normalize(a_)[[ 'price',
     'administration.price',
