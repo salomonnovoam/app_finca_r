@@ -65,6 +65,6 @@ with tab1:
     if st.button('Recolectar datos'):
         with st.spinner('Recolectando datos...'):
             data_r = executor_lasso(search_r)
-            df_to_predict = get_json_from_url(search_r)
+            df_to_predict = executor_lasso(search_r)
             st.dataframe(df_to_predict.drop(['price'],axis=1)) 
             st.write('El precio de la propiedad debería ser', df_to_predict) 
