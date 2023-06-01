@@ -70,6 +70,7 @@ def prepare (i):
 
 
 def get_processed_info(link):
+    print(link)
 
     a = get_json_from_url(link)
     print(a)
