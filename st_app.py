@@ -30,12 +30,12 @@ class PredictionModel:
     def make_predictions(self, data):
         result = self.model.predict(data)
         return result
-
- def executor_lasso (link):
-     predicion_model = PredictionModel()
-     df_to_predict = get_processed_info(link)
-     results = predicion_model.make_predictions(df_to_predict)
-     return results[0]# + ' ' + df_to_predict.price.values[0]
+    
+def executor_lasso (link):
+    predicion_model = PredictionModel()
+    df_to_predict = get_processed_info(link)
+    results = predicion_model.make_predictions(df_to_predict)
+    return results[0]# + ' ' + df_to_predict.price.values[0]
 
 
 #%%
