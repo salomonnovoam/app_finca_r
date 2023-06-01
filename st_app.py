@@ -66,5 +66,5 @@ with tab1:
         with st.spinner('Recolectando datos...'):
             data_r = executor_lasso(search_r)
             df_to_predict = executor_lasso(search_r)
-            st.dataframe(df_to_predict.drop(['price'],axis=1)) 
+#            st.dataframe(df_to_predict.drop(['price'],axis=1)) 
             st.write('El precio de la propiedad debería ser', df_to_predict) 
