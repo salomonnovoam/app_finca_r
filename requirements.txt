@@ -7,7 +7,7 @@ numpy==1.21.0
 # bs4==4.11.1
 # beautifulsoup4==4.11.1
 
-lxml
+bs4
 scikit-learn
 Pillow==9.4.0
 pandas==1.5.3
