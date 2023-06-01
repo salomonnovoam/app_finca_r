@@ -45,8 +45,10 @@ def get_json_from_url(link):
             headers=headers,
             proxies = get_proxy_dc()
         )
+        soup = BeautifulSoup(response.text, 'lxml')
+        
 
-        return response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
+        return soup #response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
     except Exception as e:
         print(e)
         print('-----error----')
