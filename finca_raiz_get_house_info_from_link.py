@@ -12,8 +12,8 @@ def get_proxy_dc()-> dict:
     """
 
 
-    username = 'brd-customer-hl_435d7aea-zone-data_center-country-in'
-    password = '8dletu9t4a7u'
+    username =  'brd-customer-hl_435d7aea-zone-residential-country-in'
+    password = 'evb8oehm4sza'
 
 
     port = 22225
