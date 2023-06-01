@@ -53,4 +53,5 @@ def get_json_from_url(link):
         print(e)
         print('-----error----')
         print(link)
+        return e
 # %%
