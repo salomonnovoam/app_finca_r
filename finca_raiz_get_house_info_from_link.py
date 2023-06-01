@@ -53,6 +53,7 @@ def get_json_from_url(link):
         print(link)
         # return json.loads(discovery)['props']['pageProps']
         return response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
+        return response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
     except Exception as e:
         print(e)
         print('-----error----')
