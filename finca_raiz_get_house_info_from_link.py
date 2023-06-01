@@ -47,8 +47,12 @@ def get_json_from_url(link):
         )
         soup = BeautifulSoup(response.text)
         
+        discovery = soup.find('script', {'id':'__NEXT_DATA__'}).text
+        print(link)
+        return json.loads(discovery)['props']['pageProps']
+        
 
-        return str(soup) #response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
+       # return str(soup) #response.status_code#response.status_code#json.loads(discovery)['props']['pageProps']
     except Exception as e:
         print(e)
         print('-----error----')
