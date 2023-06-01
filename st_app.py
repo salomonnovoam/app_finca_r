@@ -10,7 +10,7 @@ import os
 # from lasso_predictor import executor_lasso
 from joblib import load
 print('importa')
-from finca_raiz_get_house_info_from_link import get_processed_info
+from finca_raiz_get_house_info_from_link import get_json_from_url
 print('importado')
 #%%
 
@@ -31,11 +31,11 @@ class PredictionModel:
         result = self.model.predict(data)
         return result
 
-def executor_lasso (link):
-    predicion_model = PredictionModel()
-    df_to_predict = get_processed_info(link)
-    results = predicion_model.make_predictions(df_to_predict)
-    return results[0]# + ' ' + df_to_predict.price.values[0]
+# def executor_lasso (link):
+#     predicion_model = PredictionModel()
+#     df_to_predict = get_processed_info(link)
+#     results = predicion_model.make_predictions(df_to_predict)
+#     return results[0]# + ' ' + df_to_predict.price.values[0]
 
 
 #%%
@@ -65,7 +65,6 @@ with tab1:
     if st.button('Recolectar datos'):
         with st.spinner('Recolectando datos...'):
 #            data_r = executor_lasso(search_r)
-            df_to_predict = get_processed_info(search_r)
+            df_to_predict = get_json_from_url(search_r)
 #            st.dataframe(df_to_predict.drop(['price'],axis=1)) 
             st.write('El precio de la propiedad debería ser', df_to_predict) 
-
