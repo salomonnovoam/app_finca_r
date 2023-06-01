@@ -1,9 +1,30 @@
 #%%
 
-import requests, json, pandas as pd
+import requests, json, pandas as pd, random
 from bs4 import BeautifulSoup
 
 #%%
+
+def get_proxy_dc()-> dict:
+    """
+    It returns a dictionary with the keys 'http' and 'https' and the values are the proxy address to use the datacenter proxy
+    :return: A dictionary with the keys 'http' and 'https' and the values are the entry variable.
+    """
+
+
+    username = 'brd-customer-hl_435d7aea-zone-data_center-country-in'
+    password = '8dletu9t4a7u'
+
+
+    port = 22225
+    session_id = random.random()
+    super_proxy_url = ('http://%s-session-%s:%s@zproxy.lum-superproxy.io:%d' %
+        (username, session_id, password, port))
+    proxy_handler = {
+        'http': super_proxy_url,
+        'https': super_proxy_url,
+    } 
+    return proxy_handler
 
 def get_json_from_url(link):
 
@@ -16,7 +37,8 @@ def get_json_from_url(link):
         }
 
         response = requests.get( link,
-            headers=headers,
+            headers=headers, proxies = get_proxy_dc()
+                             
         )
 
         soup = BeautifulSoup(response.text, 'lxml')
