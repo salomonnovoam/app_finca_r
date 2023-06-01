@@ -43,13 +43,13 @@ def executor_lasso (link):
 st.header("Herramienta para identificar oportunidades de negocio en Bogotá")
 st.markdown(''' Data Finca Raíz''')
 # tab1, tab2, tab3 = st.tabs(["Lasso","Model 2","Model 3"])
-tab1, tab2, tab3 = st.tabs(["¿Cuánto debería costar una propiedad, dadas sus características?",".","."])
+tab1, tab2, tab3 = st.tabs(["Herramienta",".","."])
 
 
 with tab1:
     # image2 = Image.open('image.png')
     # st.image(image2, width=75)
-    st.header("Regression Tree")
+    st.header("¿Cuánto debería costar una propiedad, dadas sus características?")
     # col1, col2 = st.columns(2)
 
     st.write('')
