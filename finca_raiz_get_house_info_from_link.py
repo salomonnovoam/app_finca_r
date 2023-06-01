@@ -78,35 +78,35 @@ def get_processed_info(link):
 
 
 
-    df = pd.json_normalize(a_)[[ 'price',
-    'administration.price',
-    'age.id',
-    'age.name',
-    'area',
-    'baths.id',
-    'baths.name',
-    'client.type',
-    'condition.id',
-    'floor.id',
-    'garages.id',
-    'locations.lat',
-    'locations.lng',
-    'rooms.name',
-    'segmentation.baños',
-    'segmentation.habitaciones',
-    'segmentation.tipo_cliente',
-    'stratum.id']]
+    #df = pd.json_normalize(a_)[[ 'price',
+    #'administration.price',
+    #'age.id',
+    #'age.name',
+    #'area',
+    #'baths.id',
+    #'baths.name',
+    #'client.type',
+    #'condition.id',
+    #'floor.id',
+    #'garages.id',
+    #'locations.lat',
+    #'locations.lng',
+    #'rooms.name',
+    #'segmentation.baños',
+    #'segmentation.habitaciones',
+    #'segmentation.tipo_cliente',
+    #'stratum.id']]
+#
+    #test = df
+    #test['stratum.id'] = test['stratum.id'].replace(100,1)
+    #test['client.type'] = test['client.type'].replace('BUILDER','BROKER')
+    #test = test[test['segmentation.habitaciones'] != 'Sin especificar']
+    #test = test[test['age.name'] != 'Sin especificar']
+    #test = test[test['baths.name'] != 'Sin especificar']
+    #test = test[test['rooms.name'] != 'Sin especificar']
+    #test = test[test['segmentation.baños'] != 'Sin especificar']
+    #test = test[test['segmentation.habitaciones'] != 'UNDEFINED']
 
-    test = df
-    test['stratum.id'] = test['stratum.id'].replace(100,1)
-    test['client.type'] = test['client.type'].replace('BUILDER','BROKER')
-    test = test[test['segmentation.habitaciones'] != 'Sin especificar']
-    test = test[test['age.name'] != 'Sin especificar']
-    test = test[test['baths.name'] != 'Sin especificar']
-    test = test[test['rooms.name'] != 'Sin especificar']
-    test = test[test['segmentation.baños'] != 'Sin especificar']
-    test = test[test['segmentation.habitaciones'] != 'UNDEFINED']
-
-    return test
+    return str(a)
 
 # %%
