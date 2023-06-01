@@ -9,8 +9,9 @@ import os
 
 # from lasso_predictor import executor_lasso
 from joblib import load
+print('importa')
 from finca_raiz_get_house_info_from_link import get_processed_info
-
+print('importado')
 #%%
 
 # image_r = Image.open('Iceberg-Data-Final-Logo.png')
